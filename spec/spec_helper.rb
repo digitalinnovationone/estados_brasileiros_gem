@@ -1,6 +1,6 @@
 require 'active_record'
 require 'byebug'
-require_relative '../lib/estados_brasileiros_active_record/migrate/xxx_estados_brasileiros'
+require_relative '../lib/estados_brasileiros_active_record/migrate/xxx_create_estados_brasileiros'
 require "estados_brasileiros_active_record"
 
 RSpec.configure do |config|
@@ -20,4 +20,4 @@ ActiveRecord::Base.establish_connection(
   database: File.expand_path("../database/db.sqlite3", __dir__)
 )
 
-CreateEstados.new.change
+CreateEstadosBrasileiros.new.change
